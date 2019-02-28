@@ -182,11 +182,11 @@ public int compareTo(Person o) {
 最后按照中序遍历（左-根-右）的方式可以取得内容，所以数据是排序后的结果。
 #### 范例：实现基础二叉树
 ```java
-class Person implements Comparable<Person> {
+class Person1 implements Comparable<Person1> {
     private String name;
     private int age;
 
-    public Person(String name, int age) {
+    public Person1(String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -208,19 +208,18 @@ class Person implements Comparable<Person> {
     }
 
     @Override
-    public int compareTo(Person o) {
+    public int compareTo(Person1 o) {
         return this.age - o.age;
     }
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "Person1{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
     }
 }
-
 class BinaryTree {
     public class Node {
         private Comparable data;
@@ -288,13 +287,13 @@ class BinaryTree {
     }
 
 }
-public class TestDemo3 {
+public class TestDemo4 {
     public static void main(String[] args) {
         BinaryTree bt = new BinaryTree();
-        bt.add(new Person("张三",15));
-        bt.add(new Person("李四",10));
-        bt.add(new Person("王二",12));
-        bt.add(new Person("麻子",20));
+        bt.add(new Person1("张三",15));
+        bt.add(new Person1("李四",10));
+        bt.add(new Person1("王二",12));
+        bt.add(new Person1("麻子",20));
         System.out.println(Arrays.toString(bt.toArray()));
     }
 }
